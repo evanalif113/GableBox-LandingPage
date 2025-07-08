@@ -37,7 +37,10 @@ export default function LandingPage() {
             <Link href="#testimoni" className="text-gray-600 hover:text-gray-900 transition-colors">
               Testimoni
             </Link>
-            <Button variant="outline">Kontak</Button>
+            {/* Add href to Kontak button */}
+            <Button variant="outline" asChild>
+              <Link href="#kontak">Kontak</Link>
+            </Button>
           </nav>
         </div>
       </header>
@@ -59,12 +62,18 @@ export default function LandingPage() {
                 wisuda, ulang tahun, pernikahan, dan perayaan istimewa lainnya.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-lg px-8">
-                  Belanja Sekarang
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                {/* Add href to Belanja Sekarang button */}
+                <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-lg px-8" asChild>
+                  <Link href="#produk">
+                    Belanja Sekarang
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
-                  Jelajahi Koleksi
+                {/* Add href to Jelajahi Koleksi button */}
+                <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent" asChild>
+                  <Link href="#produk">
+                    Jelajahi Koleksi
+                  </Link>
                 </Button>
               </div>
               <div className="flex items-center space-x-6 text-sm text-gray-600">
@@ -105,14 +114,14 @@ export default function LandingPage() {
                 <Truck className="h-8 w-8 text-rose-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Pengiriman Cepat</h3>
-              <p className="text-gray-600 text-sm">Pengiriman kilat ke seluruh Indonesia dalam 1-3 hari kerja</p>
+              <p className="text-gray-600 text-sm">Pengiriman kilat ke seluruh Indonesia</p>
             </div>
             <div className="text-center">
               <div className="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-rose-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Kualitas Premium</h3>
-              <p className="text-gray-600 text-sm">Bahan berkualitas tinggi dan ramah lingkungan</p>
+              <p className="text-gray-600 text-sm">Kemasan berkualitas tinggi dan ramah lingkungan</p>
             </div>
             <div className="text-center">
               <div className="bg-rose-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -266,9 +275,12 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="px-8 bg-transparent">
-              Lihat Semua Produk Unggulan
-              <ArrowRight className="ml-2 h-5 w-5" />
+            {/* Add href to Lihat Semua Produk Unggulan button */}
+            <Button size="lg" variant="outline" className="px-8 bg-transparent" asChild>
+              <Link href="#produk">
+                Lihat Semua Produk Unggulan
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -280,20 +292,23 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <Badge className="mb-4 bg-green-100 text-green-800">Tentang Kami</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Kisah di Balik KotakHadiah Co.</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Cerita di balik GableBox12</h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  Dimulai dari sebuah ide sederhana pada tahun 2020, KotakHadiah Co. lahir dari keinginan untuk membuat
-                  setiap momen pemberian hadiah menjadi lebih istimewa dan berkesan.
+                  Berawal dari sebuah tugas kelompok kuliah, GableBox12 lahir dari semangat kami untuk menciptakan solusi
+                  kemasan yang inovatif dan ramah lingkungan. Kami tidak menyangka bahwa proyek yang kami kerjakan
+                  dengan penuh semangat ini akan menjadi awal dari sebuah perjalanan bisnis yang luar biasa.
                 </p>
                 <p>
                   Kami percaya bahwa kemasan bukan hanya sekedar pembungkus, tetapi bagian integral dari pengalaman
-                  memberikan dan menerima hadiah. Setiap kotak gable yang kami produksi dibuat dengan perhatian detail
-                  dan kualitas terbaik.
+                  memberikan dan menerima hadiah. Setiap kotak gable yang kami produksi adalah wujud dari ide-ide
+                  kreatif kami saat di bangku kuliah, yang kini kami sempurnakan dengan perhatian terhadap detail dan
+                  kualitas terbaik.
                 </p>
                 <p>
-                  Dengan lebih dari 10,000 pelanggan puas di seluruh Indonesia, kami terus berinovasi untuk menghadirkan
-                  produk-produk berkualitas yang ramah lingkungan dan terjangkau.
+                  Dari ruang kelas hingga melayani lebih dari 10,000 pelanggan di seluruh Indonesia, kami terus
+                  berinovasi untuk menghadirkan produk-produk berkualitas yang tidak hanya cantik, tetapi juga
+                  terjangkau dan berkelanjutan.
                 </p>
               </div>
 
@@ -364,6 +379,7 @@ export default function LandingPage() {
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-center mb-8">Pilihan Ukuran & Spesifikasi</h3>
             <div className="grid md:grid-cols-4 gap-6">
+              {/* Ukuran Kecil */}
               <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
                 <div className="bg-gray-50 rounded-lg p-6 mb-4">
                   <Image
@@ -378,11 +394,13 @@ export default function LandingPage() {
                 <p className="text-gray-600 text-sm mb-2">10cm x 10cm x 12cm</p>
                 <p className="text-gray-600 text-xs mb-3">Cocok untuk: Souvenir kecil, permen, aksesoris</p>
                 <p className="text-rose-600 font-bold text-xl mb-3">Rp 15.000</p>
-                <Button size="sm" variant="outline" className="w-full bg-transparent">
-                  Pilih Ukuran
+                {/* Add placeholder href to Pilih Ukuran button */}
+                <Button size="sm" variant="outline" className="w-full bg-transparent" asChild>
+                  <Link href="#">Pilih Ukuran</Link>
                 </Button>
               </div>
 
+              {/* Ukuran Sedang */}
               <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow border-rose-200 bg-rose-50">
                 <Badge className="mb-2 bg-rose-600 text-white">Terpopuler</Badge>
                 <div className="bg-white rounded-lg p-6 mb-4">
@@ -398,11 +416,12 @@ export default function LandingPage() {
                 <p className="text-gray-600 text-sm mb-2">15cm x 15cm x 18cm</p>
                 <p className="text-gray-600 text-xs mb-3">Cocok untuk: Hadiah sedang, makanan, buku</p>
                 <p className="text-rose-600 font-bold text-xl mb-3">Rp 25.000</p>
-                <Button size="sm" className="w-full bg-rose-600 hover:bg-rose-700">
-                  Pilih Ukuran
+                <Button size="sm" className="w-full bg-rose-600 hover:bg-rose-700" asChild>
+                  <Link href="#">Pilih Ukuran</Link>
                 </Button>
               </div>
 
+              {/* Ukuran Besar */}
               <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
                 <div className="bg-gray-50 rounded-lg p-6 mb-4">
                   <Image
@@ -417,11 +436,12 @@ export default function LandingPage() {
                 <p className="text-gray-600 text-sm mb-2">20cm x 20cm x 24cm</p>
                 <p className="text-gray-600 text-xs mb-3">Cocok untuk: Hadiah besar, pakaian, elektronik</p>
                 <p className="text-rose-600 font-bold text-xl mb-3">Rp 35.000</p>
-                <Button size="sm" variant="outline" className="w-full bg-transparent">
-                  Pilih Ukuran
+                <Button size="sm" variant="outline" className="w-full bg-transparent" asChild>
+                  <Link href="#">Pilih Ukuran</Link>
                 </Button>
               </div>
 
+              {/* Ukuran Jumbo */}
               <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
                 <div className="bg-gray-50 rounded-lg p-6 mb-4">
                   <Image
@@ -436,17 +456,20 @@ export default function LandingPage() {
                 <p className="text-gray-600 text-sm mb-2">25cm x 25cm x 30cm</p>
                 <p className="text-gray-600 text-xs mb-3">Cocok untuk: Hadiah jumbo, hampers, set produk</p>
                 <p className="text-rose-600 font-bold text-xl mb-3">Rp 45.000</p>
-                <Button size="sm" variant="outline" className="w-full bg-transparent">
-                  Pilih Ukuran
+                <Button size="sm" variant="outline" className="w-full bg-transparent" asChild>
+                  <Link href="#">Pilih Ukuran</Link>
                 </Button>
               </div>
             </div>
 
             <div className="mt-8 text-center">
               <p className="text-gray-600 mb-4">Butuh ukuran khusus atau desain kustom?</p>
-              <Button variant="outline" size="lg">
-                Konsultasi Gratis
-                <ArrowRight className="ml-2 h-5 w-5" />
+              {/* Add href to Konsultasi Gratis button */}
+              <Button variant="outline" size="lg" asChild>
+                <Link href="#kontak">
+                  Konsultasi Gratis
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -486,7 +509,7 @@ export default function LandingPage() {
                 />
                 <div>
                   <p className="font-semibold">Sarah Wijaya</p>
-                  <p className="text-sm text-gray-500">Jakarta • Wisuda S1</p>
+                  <p className="text-sm text-gray-500">Jakarta</p>
                 </div>
               </div>
             </Card>
@@ -512,7 +535,7 @@ export default function LandingPage() {
                 />
                 <div>
                   <p className="font-semibold">Budi Santoso</p>
-                  <p className="text-sm text-gray-500">Surabaya • Corporate Event</p>
+                  <p className="text-sm text-gray-500">Surabaya</p>
                 </div>
               </div>
             </Card>
@@ -524,10 +547,9 @@ export default function LandingPage() {
                 ))}
                 <Badge className="ml-2 bg-green-100 text-green-800 text-xs">Verified</Badge>
               </div>
-              <p className="text-gray-600 mb-4 italic">
-                "Desain kustomnya luar biasa! Tim KotakHadiah Co. sangat membantu mewujudkan ide kemasan pernikahan
-                impian kami. Hasilnya melebihi ekspektasi!"
-              </p>
+                <p className="text-gray-600 mb-4 italic">
+                "Desain kustomnya luar biasa! benar-benar mewujudkan ide kemasan untuk pesta ulang tahun anak saya. Hasilnya melebihi ekspektasi dan membuat pestanya makin meriah!"
+                </p>
               <div className="flex items-center">
                 <Image
                   src="/placeholder.svg?height=50&width=50"
@@ -537,8 +559,8 @@ export default function LandingPage() {
                   className="rounded-full mr-3"
                 />
                 <div>
-                  <p className="font-semibold">Adit & Rani</p>
-                  <p className="text-sm text-gray-500">Bandung • Wedding</p>
+                  <p className="font-semibold">Rani</p>
+                  <p className="text-sm text-gray-500">Bandung</p>
                 </div>
               </div>
             </Card>
@@ -576,31 +598,24 @@ export default function LandingPage() {
             dengan kotak gable premium kami.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-white text-rose-600 hover:bg-gray-100 text-lg px-8">
-              Mulai Belanja Sekarang
-              <ArrowRight className="ml-2 h-5 w-5" />
+            {/* Add href to Mulai Belanja Sekarang button */}
+            <Button size="lg" className="bg-white text-rose-600 hover:bg-gray-100 text-lg px-8" asChild>
+              <Link href="#produk">
+                Mulai Belanja Sekarang
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
+            {/* Add href to Konsultasi Gratis button */}
             <Button
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-rose-600 bg-transparent text-lg px-8"
+              asChild
             >
-              Konsultasi Gratis
+              <Link href="#kontak">
+                Konsultasi Gratis
+              </Link>
             </Button>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 text-rose-100 text-sm">
-            <div className="flex items-center justify-center">
-              <CheckCircle className="h-5 w-5 mr-2" />
-              Gratis ongkir untuk pembelian di atas Rp 500.000
-            </div>
-            <div className="flex items-center justify-center">
-              <CheckCircle className="h-5 w-5 mr-2" />
-              Garansi uang kembali 100% dalam 30 hari
-            </div>
-            <div className="flex items-center justify-center">
-              <CheckCircle className="h-5 w-5 mr-2" />
-              Customer support 24/7 siap membantu
-            </div>
           </div>
         </div>
       </section>
@@ -612,26 +627,28 @@ export default function LandingPage() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Package className="h-6 w-6 text-rose-600" />
-                <span className="text-xl font-bold">KotakHadiah Co.</span>
+                <span className="text-xl font-bold">GableBox12</span>
               </div>
               <p className="text-gray-400 mb-4">
-                Kotak gable premium untuk setiap acara istimewa. Membuat hadiah Anda berkesan sejak 2020.
+                Kotak gable premium untuk setiap acara istimewa. Membuat kenangan Anda berkesan sejak 2025.
               </p>
               <div className="flex space-x-4">
-                <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer">
+                {/* Add placeholder hrefs to social icons */}
+                <Link href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer">
                   <span className="text-xs">FB</span>
-                </div>
-                <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer">
+                </Link>
+                <Link href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer">
                   <span className="text-xs">IG</span>
-                </div>
-                <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer">
+                </Link>
+                <Link href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer">
                   <span className="text-xs">WA</span>
-                </div>
+                </Link>
               </div>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Produk</h4>
               <ul className="space-y-2 text-gray-400">
+                {/* Add placeholder hrefs to product links */}
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     Kotak Wisuda
@@ -662,6 +679,7 @@ export default function LandingPage() {
             <div>
               <h4 className="font-semibold mb-4">Layanan</h4>
               <ul className="space-y-2 text-gray-400">
+                {/* Add placeholder hrefs to service links */}
                 <li>
                   <Link href="#" className="hover:text-white transition-colors">
                     Konsultasi Gratis
@@ -692,15 +710,16 @@ export default function LandingPage() {
             <div>
               <h4 className="font-semibold mb-4">Kontak</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>📧 info@kotakhadiah.co.id</li>
-                <li>📱 +62 812-3456-7890</li>
-                <li>🏢 Jakarta, Indonesia</li>
-                <li>🕒 Senin - Sabtu: 08:00 - 17:00</li>
+                {/* Add placeholder hrefs to contact links */}
+                <li><Link href="#">📱 +62 812-3456-7890</Link></li>
+                <li><Link href="#">🏢 Kebumen, Indonesia</Link></li>
+                <li><Link href="#">🕒 Senin - Sabtu: 08:00 - 17:00</Link></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 KotakHadiah Co. Semua hak dilindungi. | Syarat & Ketentuan | Kebijakan Privasi</p>
+            {/* Add placeholder hrefs to policy links */}
+            <p>&copy; 2025 GableBox12. Hak Cipta dilindungi Undang-undang. | <Link href="#">Syarat & Ketentuan</Link> | <Link href="#">Kebijakan Privasi</Link></p>
           </div>
         </div>
       </footer>
