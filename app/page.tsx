@@ -187,7 +187,7 @@ export default function LandingPage() {
                 </div>
                 <h4 className="font-semibold">Kecil</h4>
                 <p className="text-gray-600 text-sm">4" x 4" x 4"</p>
-                <p className="text-rose-600 font-semibold">$2.99</p>
+                <p className="text-rose-600 font-semibold">Rp 30.000</p>
               </div>
               <div className="text-center">
                 <div className="bg-white rounded-lg p-6 shadow-sm mb-4">
@@ -201,7 +201,7 @@ export default function LandingPage() {
                 </div>
                 <h4 className="font-semibold">Sedang</h4>
                 <p className="text-gray-600 text-sm">6" x 6" x 6"</p>
-                <p className="text-rose-600 font-semibold">$4.99</p>
+                <p className="text-rose-600 font-semibold">Rp. 50.000</p>
               </div>
               <div className="text-center">
                 <div className="bg-white rounded-lg p-6 shadow-sm mb-4">
@@ -215,7 +215,7 @@ export default function LandingPage() {
                 </div>
                 <h4 className="font-semibold">Besar</h4>
                 <p className="text-gray-600 text-sm">8" x 8" x 8"</p>
-                <p className="text-rose-600 font-semibold">$6.99</p>
+                <p className="text-rose-600 font-semibold">Rp. 70.000</p>
               </div>
               <div className="text-center">
                 <div className="bg-white rounded-lg p-6 shadow-sm mb-4">
@@ -229,7 +229,7 @@ export default function LandingPage() {
                 </div>
                 <h4 className="font-semibold">Sangat Besar</h4>
                 <p className="text-gray-600 text-sm">10" x 10" x 10"</p>
-                <p className="text-rose-600 font-semibold">$8.99</p>
+                <p className="text-rose-600 font-semibold">Rp. 100.000</p>
               </div>
             </div>
           </div>
@@ -346,7 +346,7 @@ export default function LandingPage() {
             </Button>
           </div>
           <div className="mt-8 text-rose-100">
-            <p>Gratis ongkir untuk pembelian di atas Rp 500.000 • Garansi uang kembali 30 hari</p>
+            <p>Gratis ongkir untuk pembelian di atas Rp 50.000</p>
           </div>
         </div>
       </section>
