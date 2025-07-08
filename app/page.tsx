@@ -28,7 +28,7 @@ export default function LandingPage() {
             <span className="text-2xl font-bold text-gray-900">GableBox12</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#etalase" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link href="#produk" className="text-gray-600 hover:text-gray-900 transition-colors">
               Produk
             </Link>
             <Link href="#tentang" className="text-gray-600 hover:text-gray-900 transition-colors">
@@ -141,151 +141,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Etalase - Featured Products */}
-      <section id="etalase" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-100 text-blue-800">Produk Unggulan</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Etalase Produk Terlaris</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Koleksi kotak gable pilihan yang paling disukai pelanggan kami
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Featured Product 1 */}
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
-              <div className="relative overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=300&width=400"
-                  alt="Kotak Gable Wisuda Premium"
-                  width={400}
-                  height={300}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <Badge className="absolute top-4 left-4 bg-blue-600 text-white">Terlaris</Badge>
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2">
-                  <GraduationCap className="h-5 w-5 text-blue-600" />
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Kotak Gable Wisuda Premium</h3>
-                <p className="text-gray-600 mb-4">
-                  Kotak elegan dengan desain akademik, sempurna untuk hadiah wisuda dan pencapaian akademik.
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-                    ))}
-                    <span className="text-sm text-gray-500 ml-2">(127 ulasan)</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-2xl font-bold text-rose-600">Rp 45.000</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">Rp 60.000</span>
-                  </div>
-                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-                    Beli Sekarang
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Featured Product 2 */}
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
-              <div className="relative overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=300&width=400"
-                  alt="Kotak Gable Ulang Tahun Colorful"
-                  width={400}
-                  height={300}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <Badge className="absolute top-4 left-4 bg-pink-600 text-white">Favorit</Badge>
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2">
-                  <Gift className="h-5 w-5 text-pink-600" />
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Kotak Gable Ulang Tahun Colorful</h3>
-                <p className="text-gray-600 mb-4">
-                  Desain berwarna-warni yang ceria, cocok untuk pesta ulang tahun anak dan dewasa.
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-                    ))}
-                    <span className="text-sm text-gray-500 ml-2">(89 ulasan)</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-2xl font-bold text-rose-600">Rp 35.000</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">Rp 45.000</span>
-                  </div>
-                  <Button size="sm" className="bg-pink-600 hover:bg-pink-700">
-                    Beli Sekarang
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Featured Product 3 */}
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
-              <div className="relative overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=300&width=400"
-                  alt="Kotak Gable Wedding Elegant"
-                  width={400}
-                  height={300}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <Badge className="absolute top-4 left-4 bg-purple-600 text-white">Premium</Badge>
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2">
-                  <Heart className="h-5 w-5 text-purple-600" />
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Kotak Gable Wedding Elegant</h3>
-                <p className="text-gray-600 mb-4">
-                  Kemasan mewah untuk souvenir pernikahan dengan sentuhan elegan dan romantis.
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-                    ))}
-                    <span className="text-sm text-gray-500 ml-2">(156 ulasan)</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-2xl font-bold text-rose-600">Rp 65.000</span>
-                    <span className="text-sm text-gray-500 line-through ml-2">Rp 80.000</span>
-                  </div>
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-700">
-                    Beli Sekarang
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            {/* Add href to Lihat Semua Produk Unggulan button */}
-            <Button size="lg" variant="outline" className="px-8 bg-transparent" asChild>
-              <Link href="#produk">
-                Lihat Semua Produk Unggulan
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Tentang Kami */}
       <section id="tentang" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -378,21 +233,20 @@ export default function LandingPage() {
           {/* Size Options with Details */}
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-center mb-8">Pilihan Ukuran & Spesifikasi</h3>
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               {/* Ukuran Kecil */}
-              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow justify-self-center">
                 <div className="bg-gray-50 rounded-lg p-6 mb-4">
                   <Image
-                    src="/placeholder.svg?height=120&width=120"
+                    src="\images\box_mini.jpg"
                     alt="Kotak Gable Kecil"
                     width={120}
                     height={120}
-                    className="mx-auto"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <h4 className="font-semibold text-lg mb-2">Ukuran Kecil</h4>
-                <p className="text-gray-600 text-sm mb-2">10cm x 10cm x 12cm</p>
-                <p className="text-gray-600 text-xs mb-3">Cocok untuk: Souvenir kecil, permen, aksesoris</p>
+                <h4 className="font-semibold text-lg mb-2">Ukuran Mini</h4>
+                <p className="text-gray-600 text-sm mb-2">20cm x 20cm x 15cm</p>
                 <p className="text-rose-600 font-bold text-xl mb-3">Rp 15.000</p>
                 {/* Add placeholder href to Pilih Ukuran button */}
                 <Button size="sm" variant="outline" className="w-full bg-transparent" asChild>
@@ -401,20 +255,19 @@ export default function LandingPage() {
               </div>
 
               {/* Ukuran Sedang */}
-              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow border-rose-200 bg-rose-50">
+              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow border-rose-200 bg-rose-50 justify-self-center">
                 <Badge className="mb-2 bg-rose-600 text-white">Terpopuler</Badge>
                 <div className="bg-white rounded-lg p-6 mb-4">
                   <Image
-                    src="/placeholder.svg?height=140&width=140"
+                    src="\images\gable_box_modal.jpg"
                     alt="Kotak Gable Sedang"
                     width={140}
                     height={140}
-                    className="mx-auto"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <h4 className="font-semibold text-lg mb-2">Ukuran Sedang</h4>
                 <p className="text-gray-600 text-sm mb-2">15cm x 15cm x 18cm</p>
-                <p className="text-gray-600 text-xs mb-3">Cocok untuk: Hadiah sedang, makanan, buku</p>
                 <p className="text-rose-600 font-bold text-xl mb-3">Rp 25.000</p>
                 <Button size="sm" className="w-full bg-rose-600 hover:bg-rose-700" asChild>
                   <Link href="#">Pilih Ukuran</Link>
@@ -422,40 +275,19 @@ export default function LandingPage() {
               </div>
 
               {/* Ukuran Besar */}
-              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
+              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow justify-self-center">
                 <div className="bg-gray-50 rounded-lg p-6 mb-4">
                   <Image
-                    src="/placeholder.svg?height=160&width=160"
+                    src="\images\box_besar.jpg"
                     alt="Kotak Gable Besar"
                     width={160}
                     height={160}
-                    className="mx-auto"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <h4 className="font-semibold text-lg mb-2">Ukuran Besar</h4>
                 <p className="text-gray-600 text-sm mb-2">20cm x 20cm x 24cm</p>
-                <p className="text-gray-600 text-xs mb-3">Cocok untuk: Hadiah besar, pakaian, elektronik</p>
                 <p className="text-rose-600 font-bold text-xl mb-3">Rp 35.000</p>
-                <Button size="sm" variant="outline" className="w-full bg-transparent" asChild>
-                  <Link href="#">Pilih Ukuran</Link>
-                </Button>
-              </div>
-
-              {/* Ukuran Jumbo */}
-              <div className="text-center p-6 border rounded-lg hover:shadow-md transition-shadow">
-                <div className="bg-gray-50 rounded-lg p-6 mb-4">
-                  <Image
-                    src="/placeholder.svg?height=180&width=180"
-                    alt="Kotak Gable Jumbo"
-                    width={180}
-                    height={180}
-                    className="mx-auto"
-                  />
-                </div>
-                <h4 className="font-semibold text-lg mb-2">Ukuran Jumbo</h4>
-                <p className="text-gray-600 text-sm mb-2">25cm x 25cm x 30cm</p>
-                <p className="text-gray-600 text-xs mb-3">Cocok untuk: Hadiah jumbo, hampers, set produk</p>
-                <p className="text-rose-600 font-bold text-xl mb-3">Rp 45.000</p>
                 <Button size="sm" variant="outline" className="w-full bg-transparent" asChild>
                   <Link href="#">Pilih Ukuran</Link>
                 </Button>
