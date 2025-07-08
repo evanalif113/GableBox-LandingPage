@@ -13,7 +13,7 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Package className="h-8 w-8 text-rose-600" />
-            <span className="text-2xl font-bold text-gray-900">KotakHadiah Co.</span>
+            <span className="text-2xl font-bold text-gray-900">GableBox.</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="#products" className="text-gray-600 hover:text-gray-900">
@@ -39,7 +39,7 @@ export default function LandingPage() {
             <span className="text-rose-600"> Setiap Acara</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Ubah hadiah Anda menjadi pengalaman yang tak terlupakan dengan kotak gable premium kami. Sempurna untuk
+            Ubah kenanga Anda menjadi pengalaman yang tak terlupakan dengan kotak gable dari kami. Sempurna untuk
             wisuda, ulang tahun, dan perayaan istimewa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -85,7 +85,7 @@ export default function LandingPage() {
                 <Users className="h-8 w-8 text-rose-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Opsi Kustom</h3>
-              <p className="text-gray-600">Personalisasi kotak Anda dengan warna dan desain khusus</p>
+              <p className="text-gray-600">Personalisasi GableBox Anda dengan warna dan desain khusus</p>
             </div>
           </div>
         </div>
