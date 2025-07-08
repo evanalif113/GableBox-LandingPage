@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GableBox",
-  description: "GableBox - Kotak Kenangan untuk Setiap Acara",
+  title: "GableBox12",
+  description: "GableBox - Bingkisan bukan sembarang bingkisan",
 };
 
 export default function RootLayout({
