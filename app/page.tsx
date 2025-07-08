@@ -531,13 +531,13 @@ export default function LandingPage() {
               <div className="flex items-center">
                 <Image
                   src="/placeholder.svg?height=50&width=50"
-                  alt="Rina & Andi"
+                  alt="user3"
                   width={50}
                   height={50}
                   className="rounded-full mr-3"
                 />
                 <div>
-                  <p className="font-semibold">Rina & Andi</p>
+                  <p className="font-semibold">Adit & Rani</p>
                   <p className="text-sm text-gray-500">Bandung • Wedding</p>
                 </div>
               </div>
