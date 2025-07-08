@@ -169,15 +169,15 @@ export default function LandingPage() {
 
               <div className="grid grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-rose-600">10K+</div>
+                  <div className="text-2xl font-bold text-rose-600">50+</div>
                   <div className="text-sm text-gray-600">Pelanggan Puas</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-rose-600">50+</div>
+                  <div className="text-2xl font-bold text-rose-600">5+</div>
                   <div className="text-sm text-gray-600">Desain Tersedia</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-rose-600">4.9</div>
+                  <div className="text-2xl font-bold text-rose-600">4.7</div>
                   <div className="text-sm text-gray-600">Rating Pelanggan</div>
                 </div>
               </div>
@@ -186,32 +186,18 @@ export default function LandingPage() {
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <Image
-                  src="/placeholder.svg?height=250&width=300"
-                  alt="Tim KotakHadiah Co."
+                  src="/images/box_mini.jpg"
+                  alt="GableBox."
                   width={300}
                   height={250}
                   className="rounded-lg shadow-lg"
                 />
                 <Image
-                  src="/placeholder.svg?height=250&width=300"
-                  alt="Proses produksi"
+                  src="/images/box_besar.jpg"
+                  alt="Isi"
                   width={300}
                   height={250}
                   className="rounded-lg shadow-lg mt-8"
-                />
-                <Image
-                  src="/placeholder.svg?height=250&width=300"
-                  alt="Quality control"
-                  width={300}
-                  height={250}
-                  className="rounded-lg shadow-lg -mt-8"
-                />
-                <Image
-                  src="/placeholder.svg?height=250&width=300"
-                  alt="Packaging process"
-                  width={300}
-                  height={250}
-                  className="rounded-lg shadow-lg"
                 />
               </div>
             </div>
@@ -333,7 +319,7 @@ export default function LandingPage() {
               </p>
               <div className="flex items-center">
                 <Image
-                  src="/placeholder.svg?height=50&width=50"
+                  src="/images/akun.png"
                   alt="Sarah Wijaya"
                   width={50}
                   height={50}
@@ -359,7 +345,7 @@ export default function LandingPage() {
               </p>
               <div className="flex items-center">
                 <Image
-                  src="/placeholder.svg?height=50&width=50"
+                  src="/images/akun.png"
                   alt="Budi Santoso"
                   width={50}
                   height={50}
@@ -384,7 +370,7 @@ export default function LandingPage() {
                 </p>
               <div className="flex items-center">
                 <Image
-                  src="/placeholder.svg?height=50&width=50"
+                  src="/images/akun.png"
                   alt="user3"
                   width={50}
                   height={50}
@@ -399,22 +385,18 @@ export default function LandingPage() {
           </div>
 
           <div className="text-center bg-gray-50 rounded-2xl p-8">
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-rose-600 mb-2">4.9/5</div>
                 <p className="text-gray-600">Rating Rata-rata</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-rose-600 mb-2">10,000+</div>
+                <div className="text-3xl font-bold text-rose-600 mb-2">100+</div>
                 <p className="text-gray-600">Pelanggan Puas</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-rose-600 mb-2">98%</div>
+                <div className="text-3xl font-bold text-rose-600 mb-2">90%</div>
                 <p className="text-gray-600">Repeat Order</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-rose-600 mb-2">24/7</div>
-                <p className="text-gray-600">Customer Support</p>
               </div>
             </div>
           </div>
