@@ -128,7 +128,7 @@ export default function LandingPage() {
             <Card className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=250&width=400"
+                  src="/images/box_besar.jpg"
                   alt="Birthday gable boxes"
                   width={400}
                   height={250}
