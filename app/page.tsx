@@ -105,7 +105,7 @@ export default function LandingPage() {
             <Card className="overflow-hidden hover:shadow-lg transition-shadow">
               <div className="relative">
                 <Image
-                  src="/images/box_wisuda.jpg"
+                  src="/images/box_besar.jpg"
                   alt="Graduation gable boxes"
                   width={400}
                   height={250}
