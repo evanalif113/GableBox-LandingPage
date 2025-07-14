@@ -17,11 +17,42 @@ import {
   Facebook,
   Instagram,
   MessageCircle,
+  ArrowUp,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 export default function LandingPage() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  // Show button when page is scrolled up to a certain amount
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true)
+    } else {
+      setIsVisible(false)
+    }
+  }
+
+  // Set the top cordinate to 0
+  // make scrolling smooth
+  const scrollToTop = () => {
+    const c = document.documentElement.scrollTop || document.body.scrollTop
+    if (c > 0) {
+      window.requestAnimationFrame(scrollToTop)
+      window.scrollTo(0, c - c / 20) // The '20' controls the scroll speed
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility)
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility)
+    }
+  }, [])
+
   return (
     <>
       <style jsx global>{`
@@ -553,6 +584,14 @@ export default function LandingPage() {
             </div>
           </div>
         </footer>
+        {isVisible && (
+          <Button
+            onClick={scrollToTop}
+            className="fixed bottom-5 right-5 h-12 w-12 rounded-full bg-rose-600 hover:bg-rose-700 shadow-lg"
+          >
+            <ArrowUp className="h-6 w-6" />
+          </Button>
+        )}
       </div>
     </>
   )
