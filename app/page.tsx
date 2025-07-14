@@ -14,6 +14,9 @@ import {
   Award,
   CheckCircle,
   ArrowRight,
+  Facebook,
+  Instagram,
+  MessageCircle,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -457,14 +460,23 @@ export default function LandingPage() {
                 </p>
                 <div className="flex space-x-4">
                   {/* Add placeholder hrefs to social icons */}
-                  <Link href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer">
-                    <span className="text-xs">FB</span>
+                  <Link
+                    href="#"
+                    className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer"
+                  >
+                    <Facebook className="h-4 w-4" />
                   </Link>
-                  <Link href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer">
-                    <span className="text-xs">IG</span>
+                  <Link
+                    href="https://www.instagram.com/gablebox12?utm_source=ig_web_button_share_sheet&igsh=MWkzdnczZGZlcWhhYw=="
+                    className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer"
+                  >
+                    <Instagram className="h-4 w-4" />
                   </Link>
-                  <Link href="#" className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer">
-                    <span className="text-xs">WA</span>
+                  <Link
+                    href="https://wa.me/6281234567890"
+                    className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-rose-600 transition-colors cursor-pointer"
+                  >
+                    <MessageCircle className="h-4 w-4" />
                   </Link>
                 </div>
               </div>
@@ -480,11 +492,6 @@ export default function LandingPage() {
                   <li>
                     <Link href="#" className="hover:text-white transition-colors">
                       Kotak Ulang Tahun
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-white transition-colors">
-                      Souvenir Pernikahan
                     </Link>
                   </li>
                   <li>
