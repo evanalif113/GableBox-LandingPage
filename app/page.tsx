@@ -85,7 +85,7 @@ export default function LandingPage() {
               </Link>
               {/* Add href to Kontak button */}
               <Button variant="outline" asChild>
-                <Link href="#kontak">Kontak</Link>
+                <Link href="https://wa.me/6281234567890">Kontak</Link>
               </Button>
             </nav>
           </div>
