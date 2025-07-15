@@ -21,7 +21,77 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
+
+const AnimatedNumber = ({
+  value,
+  className,
+  isFloat = false,
+  suffix = "",
+}: {
+  value: number
+  className?: string
+  isFloat?: boolean
+  suffix?: string
+}) => {
+  const [currentValue, setCurrentValue] = useState(0)
+  const ref = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let start = 0
+          const end = value
+          const duration = 1500 // 1.5 seconds
+          const startTime = performance.now()
+
+          const animate = (currentTime: number) => {
+            const elapsedTime = currentTime - startTime
+            const progress = Math.min(elapsedTime / duration, 1)
+            const animatedValue = progress * (end - start) + start
+
+            if (isFloat) {
+              setCurrentValue(parseFloat(animatedValue.toFixed(1)))
+            } else {
+              setCurrentValue(Math.floor(animatedValue))
+            }
+
+            if (progress < 1) {
+              requestAnimationFrame(animate)
+            } else {
+              setCurrentValue(end)
+            }
+          }
+          requestAnimationFrame(animate)
+          if (ref.current) {
+            observer.unobserve(ref.current)
+          }
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current)
+      }
+    }
+  }, [value, isFloat])
+
+  return (
+    <span ref={ref} className={className}>
+      {currentValue}
+      {suffix}
+    </span>
+  )
+}
 
 export default function LandingPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -109,18 +179,18 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   {/* Add href to Belanja Sekarang button */}
-                  <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-lg px-8" asChild>
+                  <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-xl px-10 py-4" asChild>
                     <Link href="http://shopee.co.id/gablebox">
                       Belanja Sekarang
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
                   {/* Add href to Jelajahi Koleksi button */}
-                  <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent" asChild>
+                  {/*<Button size="lg" variant="outline" className="text-lg px-8 bg-transparent" asChild>
                     <Link href="#produk">
                       Jelajahi Koleksi
                     </Link>
-                  </Button>
+                  </Button>*/}
                 </div>
                 <div className="flex items-center space-x-6 text-sm text-gray-600">
                   <div className="flex items-center">
@@ -215,15 +285,21 @@ export default function LandingPage() {
 
                 <div className="grid grid-cols-3 gap-6 mt-8">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-rose-600">50+</div>
+                    <div className="text-2xl font-bold text-rose-600">
+                      <AnimatedNumber value={50} suffix="+" />
+                    </div>
                     <div className="text-sm text-gray-600">Pelanggan Puas</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-rose-600">5+</div>
+                    <div className="text-2xl font-bold text-rose-600">
+                      <AnimatedNumber value={5} suffix="+" />
+                    </div>
                     <div className="text-sm text-gray-600">Desain Tersedia</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-rose-600">4.7</div>
+                    <div className="text-2xl font-bold text-rose-600">
+                      <AnimatedNumber value={4.7} isFloat />
+                    </div>
                     <div className="text-sm text-gray-600">Rating Pelanggan</div>
                   </div>
                 </div>
@@ -433,15 +509,22 @@ export default function LandingPage() {
             <div className="text-center bg-gray-50 rounded-2xl p-8">
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-rose-600 mb-2">4.9/5</div>
+                  <div className="text-3xl font-bold text-rose-600 mb-2">
+                    <AnimatedNumber value={4.9} isFloat />
+                    /5
+                  </div>
                   <p className="text-gray-600">Rating Rata-rata</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-rose-600 mb-2">100+</div>
+                  <div className="text-3xl font-bold text-rose-600 mb-2">
+                    <AnimatedNumber value={100} suffix="+" />
+                  </div>
                   <p className="text-gray-600">Pelanggan Puas</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-rose-600 mb-2">90%</div>
+                  <div className="text-3xl font-bold text-rose-600 mb-2">
+                    <AnimatedNumber value={90} suffix="%" />
+                  </div>
                   <p className="text-gray-600">Repeat Order</p>
                 </div>
               </div>
