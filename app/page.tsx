@@ -110,7 +110,7 @@ export default function LandingPage() {
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   {/* Add href to Belanja Sekarang button */}
                   <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-lg px-8" asChild>
-                    <Link href="#produk">
+                    <Link href="http://shopee.co.id/gablebox">
                       Belanja Sekarang
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
@@ -181,7 +181,7 @@ export default function LandingPage() {
                   <Award className="h-8 w-8 text-rose-600" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Terpercaya</h3>
-                <p className="text-gray-600 text-sm">Dipercaya 10,000+ pelanggan di seluruh Indonesia</p>
+                <p className="text-gray-600 text-sm">Dipercaya pelanggan di seluruh Indonesia</p>
               </div>
             </div>
           </div>
@@ -196,18 +196,18 @@ export default function LandingPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Cerita di balik GableBox12</h2>
                 <div className="space-y-6 text-gray-600 leading-relaxed">
                   <p>
-                    Berawal dari sebuah tugas kelompok kuliah, GableBox12 lahir dari semangat kami untuk menciptakan solusi
+                    Berawal dari sebuah tugas kelompok kuliah, Usaha ini lahir dari semangat kami untuk menciptakan solusi
                     kemasan yang inovatif dan ramah lingkungan. Kami tidak menyangka bahwa proyek yang kami kerjakan
                     dengan penuh semangat ini akan menjadi awal dari sebuah perjalanan bisnis yang luar biasa.
                   </p>
                   <p>
-                    Kami percaya bahwa kemasan bukan hanya sekedar pembungkus, tetapi bagian integral dari pengalaman
+                    Kami percaya bahwa kemasan bukan hanya sekedar pembungkus, tetapi bagian penting dari pengalaman
                     memberikan dan menerima hadiah. Setiap kotak gable yang kami produksi adalah wujud dari ide-ide
                     kreatif kami saat di bangku kuliah, yang kini kami sempurnakan dengan perhatian terhadap detail dan
                     kualitas terbaik.
                   </p>
                   <p>
-                    Dari ruang kelas hingga melayani lebih dari 10,000 pelanggan di seluruh Indonesia, kami terus
+                    Dari ruang kelas hingga melayani lebih dari pelanggan di seluruh Indonesia, kami terus
                     berinovasi untuk menghadirkan produk-produk berkualitas yang tidak hanya cantik, tetapi juga
                     terjangkau dan berkelanjutan.
                   </p>
