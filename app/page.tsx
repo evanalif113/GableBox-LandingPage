@@ -634,11 +634,6 @@ export default function LandingPage() {
                   </li>
                   <li>
                     <Link href="#" className="hover:text-white transition-colors">
-                      Desain Kustom
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-white transition-colors">
                       Pengiriman Express
                     </Link>
                   </li>
