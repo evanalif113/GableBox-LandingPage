@@ -543,7 +543,7 @@ export default function LandingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               {/* Add href to Mulai Belanja Sekarang button */}
               <Button size="lg" className="bg-white text-rose-600 hover:bg-gray-100 text-lg px-8" asChild>
-                <Link href="#produk">
+                <Link href="http://shopee.co.id/gablebox">
                   Mulai Belanja Sekarang
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -555,7 +555,7 @@ export default function LandingPage() {
                 className="border-white text-white hover:bg-white hover:text-rose-600 bg-transparent text-lg px-8"
                 asChild
               >
-                <Link href="#kontak">
+                <Link href="https://wa.me/6281234567890">
                   Konsultasi Gratis
                 </Link>
               </Button>
